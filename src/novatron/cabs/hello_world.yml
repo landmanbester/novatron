@@ -11,6 +11,11 @@ cabs:
         info:
           A name to say hello to
         default: world
+      extra:
+        default: "hip-cargo for the win!"
+        info:
+          An extra message to include in the greeting.
+        this-is-arbitrary: true
     outputs:
       greetingto:
         dtype: File

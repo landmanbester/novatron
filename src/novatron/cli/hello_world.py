@@ -23,6 +23,17 @@ def hello_world(
             help="A name to say hello to",
         ),
     ] = "world",
+    extra: Annotated[
+        str,
+        typer.Option(
+            help="An extra message to include in the greeting.",
+        ),
+        {
+            "stimela": {
+                "this-is-arbitrary": True,
+            },
+        },
+    ] = "hip-cargo for the win!",
     greetingto: Annotated[
         File | None,
         typer.Option(
@@ -40,5 +51,6 @@ def hello_world(
     # Call the core function with all parameters
     hello_world_core(
         name=name,
+        extra=extra,
         greetingto=greetingto,
     )
