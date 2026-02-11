@@ -1,5 +1,3 @@
-
-
 def hello_world(name="world", greetingto=None):
     """
     hip-cargo hello world example
