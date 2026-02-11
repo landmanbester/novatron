@@ -1,0 +1,19 @@
+cabs:
+  hello_world:
+    flavour: python
+    command: novatron.core.hello_world.hello_world
+    image: ghcr.io/landmanbester/novatron:hello_world
+    name: hello_world
+    info:
+      hip-cargo hello world example
+    inputs:
+      name:
+        info:
+          A name to say hello to
+        default: world
+    outputs:
+      greetingto:
+        dtype: File
+        info:
+          A file to write the greeting to.
+          Written to stdout by default.
