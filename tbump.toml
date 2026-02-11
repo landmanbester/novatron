@@ -1,0 +1,24 @@
+[version]
+current = "0.1.0"
+
+# Version format: semantic versioning
+regex = '''
+  (?P<major>\d+)
+  \.
+  (?P<minor>\d+)
+  \.
+  (?P<patch>\d+)
+  '''
+
+[git]
+message_template = "Bump version to {new_version}"
+tag_template = "v{new_version}"
+
+# Files to update with the new version
+[[file]]
+src = "pyproject.toml"
+search = 'version = "{current_version}"'
+
+[[file]]
+src = "src/novatron/__init__.py"
+search = '__version__ = "{current_version}"'
