@@ -16,5 +16,8 @@ def callback() -> None:
 
 
 # Register subcommands below. Imports go here (bottom) to avoid circular imports.
+from novatron.cli.hello_world import hello_world  # noqa: E402
+
+app.command(name="hello-world")(hello_world)
 
 __all__ = ["app"]
